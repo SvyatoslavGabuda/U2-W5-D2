@@ -1,0 +1,331 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_960_720.jpg);
+  background-size: cover;
+  color: white;
+  margin: 1%;
+  font-family: "Jost", sans-serif;
+}
+header {
+  font-family: "Poppins", sans-serif;
+  border-left: ridge rgb(114, 235, 251, 0.5) 10px;
+  /* border-bottom: ridge rgb(114, 235, 251, 0.5) 10px; */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-image: url();
+  color: rgb(255, 255, 255);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#titolo {
+  margin-left: 1rem;
+  display: inline-block;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+#check {
+  display: inline-block;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  font-size: 0.7rem;
+}
+#numeroDomande {
+  border: none;
+  font-size: 0.7rem;
+  width: 30%;
+}
+#Robot {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+#testbtn {
+  display: inline-block;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+#divclock {
+  display: inline-block;
+  grid-column-start: 8;
+  grid-column-end: 11;
+  /* border-left: ridge rgb(114, 235, 251, 0.5) 10px;
+  border-bottom: ridge rgb(114, 235, 251, 0.5) 10px; */
+  border: 10px inset rgb(114, 235, 251, 0.5);
+  margin: 5px;
+  margin-right: 0;
+}
+#clock {
+  text-align: center;
+  /* font-family: "Orbitron", sans-serif; */
+  font-family: monospace, monospace;
+  color: rgb(255, 253, 253);
+  font-size: 2.5rem;
+  margin: auto;
+}
+
+.container {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 100%;
+  background-color: rgba(0, 192, 231, 0.3);
+  color: black;
+  border: solid rgba(96, 212, 216, 0.5) 10px;
+
+  padding: 0.5rem;
+}
+.task {
+  /* border: solid 2px black; */
+  text-align: center;
+}
+.task h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.task ol {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+.task li {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: rgb(86, 184, 166, 0.5);
+  border: 10px outset rgb(188, 207, 244);
+  margin: 5px;
+}
+input {
+  position: relative;
+  border: 10px ridge rgb(86, 184, 166);
+  padding: 2px;
+  margin: 2px;
+  width: 80%;
+  background-color: rgb(86, 184, 166, 0.5);
+
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+button {
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px 10px rgba(32, 6, 234, 0.75);
+  margin: 20px;
+  background: linear-gradient(270deg, rgb(101, 193, 239), rgb(65, 65, 253));
+  color: blanchedalmond;
+  padding: 10px;
+}
+
+button:hover {
+  border: 1px solid blue;
+  background: linear-gradient(270deg, rgb(65, 65, 253), rgb(101, 193, 239));
+}
+.day {
+  display: inline-block;
+  border: 10px outset rgb(230, 238, 253);
+  border-radius: 10%;
+  margin: 3px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(106, 116, 253, 0.6);
+
+  height: fit-content;
+  aspect-ratio: 2/1;
+  text-align: center;
+}
+.day:hover {
+  border: 10px inset rgb(230, 238, 253);
+  border-radius: 15%;
+  background-color: rgba(106, 116, 253, 0.8);
+}
+
+.day span {
+  /* display: block; */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 900;
+}
+.day .numero {
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border: 2px outset rgb(76, 0, 255);
+}
+.oggi {
+  background: linear-gradient(45deg, rgb(166, 166, 248), rgb(0, 28, 119));
+  border: 10px outset rgb(0, 85, 255);
+}
+.tasked span {
+  font-size: 1rem;
+  font-weight: 900;
+  display: contents;
+}
+.domenica {
+  color: red;
+  font-weight: 600;
+  grid-column-start: 7;
+}
+.sabato {
+  grid-column-start: 6;
+}
+.venerdi {
+  grid-column-start: 5;
+}
+.giovedi {
+  grid-column-start: 4;
+}
+.mercoledi {
+  grid-column-start: 3;
+}
+.martedi {
+  grid-column-start: 2;
+}
+.lunedi {
+  grid-column-start: 1;
+}
+p {
+  margin: 10px;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+#test {
+  text-align: center;
+}
+#test h3 {
+  font-size: 4rem;
+  margin: 8rem;
+  background-color: rgba(106, 116, 253, 0.6);
+  border: outset white 5px;
+}
+.btnAnswer {
+  border: 1px solid rgb(248, 99, 0);
+  box-shadow: 0px 0px 3px 2px rgba(234, 6, 6, 0.75);
+  margin: 20px;
+  background: linear-gradient(270deg, rgb(249, 237, 0), rgb(192, 15, 15));
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-weight: 900;
+  width: 35%;
+  font-size: 2rem;
+}
+
+.selectedBtn {
+  background: linear-gradient(270deg, rgb(0, 249, 50), rgb(0, 118, 4));
+  border: 1px solid rgb(0, 255, 68);
+  box-shadow: 0px 0px 3px 2px rgba(123, 255, 0, 0.75);
+}
+#nextBtn {
+  width: 20%;
+  font-size: 2rem;
+}
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 10px;
+  border-top: solid white 1px;
+  border-bottom: solid white 1px;
+  background-color: rgba(10, 226, 255, 0.1);
+}
+button:disabled {
+  background: none;
+  background-color: black;
+}
+#contatoreDomanda {
+  font-size: 2rem;
+}
+aside {
+  text-align: center;
+}
+#resultContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#resultContainer p {
+  color: white;
+  margin: 0%;
+  font-size: 3rem;
+}
+#resultContainer h4 {
+  font-size: 2rem;
+}
+#left {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  text-align: center;
+  border-radius: 100%;
+  background-color: rgba(10, 226, 255, 0.1);
+  aspect-ratio: 1/1;
+  border: 3px outset white;
+}
+
+#rigth {
+  background-color: rgba(10, 226, 255, 0.1);
+  display: grid;
+  place-items: center;
+  margin: auto;
+  text-align: center;
+  aspect-ratio: 1/1;
+  border: 3px outset white;
+
+  border-radius: 100%;
+}
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+aside h4 {
+  font-size: 4rem;
+  padding: 2rem;
+}
+aside button {
+  margin: 5rem;
+  padding: 1rem;
+  width: 50%;
+}
+#middle {
+  margin: auto;
+  height: 400px;
+  width: 400px;
+  background-color: rgba(10, 226, 255, 0.1);
+  position: relative;
+  border-radius: 25%;
+  display: grid;
+  place-items: center;
+}
+#conteinerCerchio {
+  border: 1px solid black;
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: orange;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+#conteinerCerchio:before {
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background: linear-gradient(180deg, rgb(9, 62, 235), rgb(138, 164, 250));
+
+  border-radius: 100%;
+  border: 1px solid black;
+}
+#progresso {
+  color: black;
+  position: relative;
+  font-size: 100px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calendario.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik+Vinyl&display=swap"
+      rel="stylesheet"
+    />
+    <title>calendario</title>
+  </head>
+  <body>
+    <header>
+      <div id="titolo">
+        <h1>
+          <span id="giorno">01</span> (<span id="giornoSettimana">lunedi</span>)
+          <span id="mese">mese</span> /
+          <span id="anno">anno</span>
+        </h1>
+      </div>
+      <div id="check">
+        <label for="numeroDomande"
+          >Inserisci il numero delle domande del Test</label
+        >
+        <input type="text" name="ndomande" id="numeroDomande" value="10" />
+        <br />
+        <input class="hide" type="checkbox" name="nonSonoRobo" id="Robot" />
+        <label class="hide" for="Robot" id="labelRobot">Sono un robot</label>
+      </div>
+      <div id="testbtn">
+        <button disabled="true" id="startBtn">Today's Test</button>
+      </div>
+
+      <div id="divclock">
+        <h2 id="clock">
+          <span id="ore"></span> : <span id="min"></span> :
+          <span id="sec"></span> : <span id="millis"></span>
+        </h2>
+      </div>
+    </header>
+    <main>
+      <div class="task">
+        <input type="text" id="nomeTask" value="Insert task here" />
+        <button onclick="inserisci(event)">clicca per inserire</button>
+        <h2>things to do:</h2>
+        <ol></ol>
+      </div>
+      <div class="container"></div>
+    </main>
+    <section id="test" class="hide">
+      <div id="testContainer">
+        <h3 id="testQuestion">testo domanda</h3>
+        <div id="answer">
+          <button class="btnAnswer">a</button>
+          <button class="btnAnswer">b</button>
+          <button class="btnAnswer">c</button>
+          <button class="btnAnswer">d</button>
+        </div>
+        <p><span id="contatoreDomanda">Domanda</span></p>
+        <button id="nextBtn">NEXT</button>
+      </div>
+    </section>
+    <aside class="hide">
+      <h4>Result</h4>
+      <div id="resultContainer">
+        <div id="left">
+          <h4>Correct answer</h4>
+          <p><span id="percentualeSuccesso">80%</span></p>
+          <p><span id="correctAns">8</span> / <span class="totalAns"></span></p>
+        </div>
+        <div id="middle">
+          <div id="conteinerCerchio">
+            <div id="progresso">0%</div>
+          </div>
+        </div>
+
+        <div id="rigth">
+          <h4>Incorect answer</h4>
+          <p><span id="percentualeINsucesso">80%</span></p>
+          <p><span id="wrongAns">8</span> / <span class="totalAns"></span></p>
+        </div>
+      </div>
+    </aside>
+    <footer><p>&copy 2022 S.V.Y</p></footer>
+    <script src="./calendario.js"></script>
+    <script src="./test.js"></script>
+  </body>
+</html>
