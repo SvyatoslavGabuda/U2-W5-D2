@@ -253,8 +253,8 @@ iframe {
 
 section h2 {
   position: absolute;
-  top: -10%;
-  box-shadow: #333 2px 2px;
+  top: -7%;
+  box-shadow: rgb(103, 103, 103) 2px 2px;
 }
 /* TABELLE */
 table {
@@ -353,7 +353,7 @@ aside div .etichetta {
   height: fit-content;
   top: 0;
   right: 0;
-  color: grey;
+  color: rgb(187, 187, 187);
 }
 @media screen and (min-width: 400px) {
   aside div .etichetta {
